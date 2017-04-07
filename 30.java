@@ -1,6 +1,7 @@
-/×题意是在字符串s里寻找到包含这字符串数组所有元素（无关顺序）且之间没有其他元素的子字符串的起始index。方法是将数组所有元素入map，而后以start为起始，以wordlen为步长，依次查看s中元素在map中，在则入curmap并记录个数，不在则start前移相应距离重新开始。
-主要的思路是设置一个windowLen，来不断能够前移查看。
-×/
+//题意是在字符串s里寻找到包含这字符串数组所有元素（无关顺序）且之间没有其他元素的子字符串的起始index。
+//方法是将数组所有元素入map，而后以start为起始，以wordlen为步长，依次查看s中元素在map中，
+//在则入curmap并记录个数，不在则start前移相应距离重新开始。
+//主要的思路是设置一个windowLen，来不断能够前移查看。
 public class Solution {
     public List<Integer> findSubstring(String s, String[] words) {
         List<Integer> res=new ArrayList<Integer>();
@@ -43,7 +44,7 @@ public class Solution {
                 }
             }
         }
-        
+
 return res;
     }
 }
